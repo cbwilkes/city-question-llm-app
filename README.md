@@ -72,6 +72,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 ### Start the backend
 
 Install dependencies
+
 ```
 cd backend
 python -m venv venv
@@ -79,10 +80,18 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-1. To run the backend server:
+To run the backend server:
 
 ```
 cd backend
 source venv/bin/activate
 uvicorn main:app --reload
 ```
+
+### Start using with Docker Compose
+
+```
+docker-compose up --build
+```
+
+The frontend should be running at http://localhost:3000 and the backend should be running at http://localhost:8000

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const ENDPOINT_CITY_QUESTION = 'http://localhost:8000';
+const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:8000';
 
 export default function CityQuestionApp() {
   const [question, setQuestion] = useState('');
@@ -16,7 +16,7 @@ export default function CityQuestionApp() {
     setAnswer('');
     
     try {
-      const response = await fetch(`${ENDPOINT_CITY_QUESTION}/api/city-question`, {
+      const response = await fetch(`${API_BASE_URL}/api/city-question`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
