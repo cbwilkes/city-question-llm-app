@@ -37,19 +37,19 @@ export default function CityQuestionApp() {
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col items-center justify-center p-4">
       <div className="w-full max-w-md bg-white rounded-lg shadow-md p-6">
-        <h1 className="text-2xl font-bold text-gray-800 mb-6 text-center">City Questions</h1>
+        <h1 className="text-2xl font-bold text-gray-800 mb-6 text-center">City Questions - Gemini</h1>
         
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
             <label htmlFor="question" className="block text-sm font-medium text-gray-700 mb-1">
-              Ask a question about any city:
+              Ask Gemini a question related to a city:
             </label>
             <input
               type="text"
               id="question"
               value={question}
               onChange={(e) => setQuestion(e.target.value)}
-              placeholder="E.g., What's the population of Tokyo?"
+              placeholder="E.g., Where's the Abe Lincoln museum?"
               className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
               required
             />
