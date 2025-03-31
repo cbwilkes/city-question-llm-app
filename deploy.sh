@@ -21,6 +21,11 @@ if [ -z "$PROJECT_ID" ]; then
     exit 1
 fi
 
+if [ -z "$GEMINI_API_KEY" ]; then
+    echo "Error: GEMINI_API_KEY environment variable is not set. Set in .env or run: GEMINI_API_KEY=... ./delpoy.sh"
+    exit 1
+fi
+
 # Print deployment information
 echo "Deploying to Google Cloud Run:"
 echo "  Project ID: $PROJECT_ID"
