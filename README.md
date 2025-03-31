@@ -46,6 +46,13 @@ The frontend should be running at http://localhost:3000 and the backend should b
 
 ### To Deploy to Cloud Run
 
+Setup Artifact Registry authentication:
+
+1. Follow instructions at https://cloud.google.com/artifact-registry/docs/docker/authentication
+1. Create a Docker based Artifact Registry repository named `docker-repo`
+
+Run the deployment script:
+
 ```
 GEMINI_API_KEY=... ./deploy.sh
 ```
